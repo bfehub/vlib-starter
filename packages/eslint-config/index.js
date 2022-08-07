@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['./src/basic.js', './src/typescript.js', './src/vue.js'],
+  extends: ['./src/vue.js', './src/typescript.js', './src/basic.js'],
 }
