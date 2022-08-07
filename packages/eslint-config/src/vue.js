@@ -17,6 +17,7 @@ module.exports = {
   extends: [
     // https://eslint.vuejs.org/user-guide/#bundle-configurations
     'plugin:vue/vue3-recommended',
+    './typescript',
   ],
   rules: {
     // off rules
