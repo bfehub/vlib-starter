@@ -1,9 +1,18 @@
-import { defineUserConfig, defaultTheme } from 'vuepress'
+import { defineUserConfig, defaultTheme, viteBundler } from 'vuepress'
+import { codeBlockPlugin } from '@vlib/vuepress-plugins'
 import * as navbar from './configs/navbar'
 import * as sidebar from './configs/sidebar'
 
 export default defineUserConfig({
   base: '/vlib-starter/',
+
+  pagePatterns: [
+    '**/*.md',
+    '!.vuepress',
+    '!node_modules',
+    '../packages/ui/**/*.md',
+    '!../packages/**/node_modules',
+  ],
 
   locales: {
     '/': {
@@ -12,6 +21,11 @@ export default defineUserConfig({
       description: 'Vue3 组件库开发模板 & Vue3 组件库实践指南',
     },
   },
+
+  bundler: viteBundler({
+    viteOptions: {},
+    vuePluginOptions: {},
+  }),
 
   theme: defaultTheme({
     logo: '/images/hero.png',
@@ -28,4 +42,9 @@ export default defineUserConfig({
       },
     },
   }),
+
+  plugins: [
+    // @vlib/vuepress-plugins
+    codeBlockPlugin(),
+  ],
 })
