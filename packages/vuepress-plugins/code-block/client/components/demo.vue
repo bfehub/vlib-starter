@@ -1,7 +1,9 @@
 <template>
   <div class="vlib-demo">
     <div class="vlib-demo-example">
-      <slot>渲染 content 内容</slot>
+      <ClientOnly>
+        <slot>渲染 content 内容</slot>
+      </ClientOnly>
     </div>
     <div class="vlib-demo-content">
       <div class="vlib-demo-action">

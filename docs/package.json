@@ -13,6 +13,7 @@
     "@vlib/vuepress-plugins": "workspace:*",
     "@vuepress/client": "2.0.0-beta.49",
     "anywhere": "^1.6.0",
+    "rimraf": "^3.0.2",
     "vue": "^3.2.37",
     "vuepress": "2.0.0-beta.49"
   }
