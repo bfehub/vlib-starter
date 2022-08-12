@@ -1,0 +1,16 @@
+body {
+  --vlib-back-top-tsx-right: 40px;
+  --vlib-back-top-tsx-bottom: 40px;
+  --vlib-back-top-tsx-button-size: 40px;
+}
+
+.vlib-back-top-tsx {
+  position: fixed;
+  right: var(--vlib-back-top-tsx-right);
+  bottom: var(--vlib-back-top-tsx-bottom);
+
+  .van-button[vlib-back-top-tsx] {
+    width: var(--vlib-back-top-tsx-button-size);
+    height: var(--vlib-back-top-tsx-button-size);
+  }
+}

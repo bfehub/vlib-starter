@@ -36,5 +36,8 @@
     "forceConsistentCasingInFileNames": true,
     // See <https://github.com/vuejs/vue-cli/pull/5688>
     "skipLibCheck": true,
+
+    // Contains the specified types
+    "types": ["unplugin-vue-macros/macros-global"]
   }
 }
