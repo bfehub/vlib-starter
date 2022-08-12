@@ -1,0 +1,16 @@
+body {
+  --vlib-back-top-right: 40px;
+  --vlib-back-top-bottom: 40px;
+  --vlib-back-top-button-size: 40px;
+}
+
+.vlib-back-top {
+  position: fixed;
+  right: var(--vlib-back-top-right);
+  bottom: var(--vlib-back-top-bottom);
+
+  .van-button[vlib-back-top] {
+    width: var(--vlib-back-top-button-size);
+    height: var(--vlib-back-top-button-size);
+  }
+}

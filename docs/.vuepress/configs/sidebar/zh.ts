@@ -6,8 +6,12 @@ export const zh: SidebarConfig = {
       text: '基础组件',
       children: [
         {
-          text: 'Button 按钮',
-          link: '/../packages/ui/src/button/README.md',
+          text: 'BackTop 回到顶部',
+          link: '/../packages/ui/src/back-top/README.md',
+        },
+        {
+          text: 'BackTopTsx 回到顶部',
+          link: '/../packages/ui/src/back-top-tsx/README.md',
         },
       ],
     },
