@@ -1,5 +1,7 @@
 import { defineUserConfig, defaultTheme, viteBundler } from 'vuepress'
 import { codeBlockPlugin } from '@vlib/vuepress-plugins'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import VueMarcos from 'unplugin-vue-macros/vite'
 import * as navbar from './configs/navbar'
 import * as sidebar from './configs/sidebar'
 
@@ -23,7 +25,9 @@ export default defineUserConfig({
   },
 
   bundler: viteBundler({
-    viteOptions: {},
+    viteOptions: {
+      plugins: [vueJsx(), VueMarcos()],
+    },
     vuePluginOptions: {},
   }),
 
