@@ -4,9 +4,30 @@
   "version": "1.0.0",
   "description": "Vue components.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky install",
+    "preinstall": "npx only-allow pnpm",
+    "commit": "npx git-cz",
+    "lint:lint-staged": "lint-staged",
+    "lint:eslint": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx,vue}\"",
+    "lint:stylelint": "stylelint --fix --cache \"**/*.{css,scss,less,styl,vue}\"",
+    "lint:prettier": "prettier --write  \"**/*.{css,scss,less,styl,js,jsx,ts,tsx,vue}\""
   },
   "dependencies": {
     "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "@bfehub/eslint-config": "workspace:^1.0.0",
+    "@bfehub/stylelint-config": "workspace:^1.0.0",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.22.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.10.0",
+    "typescript": "^4.7.4"
   }
 }
