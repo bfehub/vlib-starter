@@ -1,0 +1,48 @@
+.vlib-demo {
+  background-color: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: 1px;
+}
+
+.vlib-demo-example {
+  padding: 40px 24px;
+}
+
+.vlib-demo-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0 5px;
+  border-top: 1px dashed var(--c-border);
+
+  &-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.5s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.vlib-demo-source {
+  border-top: 1px dashed var(--c-border);
+
+  pre[class*='language-'] {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  div[class*='language-'] {
+    border-radius: 0;
+  }
+}
