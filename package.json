@@ -7,6 +7,7 @@
     "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
     "commit": "npx git-cz",
+    "ui:gen": "pnpm --filter=vlib-ui gen",
     "ui:test": "pnpm --filter=vlib-ui test",
     "ui:test:ui": "pnpm --filter=vlib-ui test:ui",
     "ui:test:coverage": "pnpm --filter=vlib-ui test:coverage",

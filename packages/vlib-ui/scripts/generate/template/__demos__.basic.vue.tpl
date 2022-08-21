@@ -1,0 +1,3 @@
+<template>
+  <vlib-<%= name %> />
+</template>
