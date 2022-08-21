@@ -6,6 +6,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
+    "vant": "^3.5.0",
     "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@vant/use": "^1.4.1",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "vant": "^3.5.4",
+    "vue": "^3.2.37"
   }
 }

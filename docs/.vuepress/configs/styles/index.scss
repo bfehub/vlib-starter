@@ -1,0 +1,13 @@
+.theme-default-content {
+  table {
+    display: table;
+    width: 100%;
+
+    th,
+    td {
+      max-width: 250px;
+      text-align: left;
+      white-space: nowrap;
+    }
+  }
+}

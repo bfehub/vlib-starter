@@ -1,5 +1,7 @@
 import { defineUserConfig, defaultTheme, viteBundler } from 'vuepress'
-import { codeBlockPlugin } from '@vlib/vuepress-plugins'
+import { codeBlockPlugin } from '@bfehub/vuepress-plugins'
+import vueDefineOptions from 'unplugin-vue-define-options/vite'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import * as navbar from './configs/navbar'
 import * as sidebar from './configs/sidebar'
 
@@ -23,7 +25,14 @@ export default defineUserConfig({
   },
 
   bundler: viteBundler({
-    viteOptions: {},
+    viteOptions: {
+      plugins: [
+        // @ts-ignore
+        vueDefineOptions(),
+        // @ts-ignore
+        vueJsx(),
+      ],
+    },
     vuePluginOptions: {},
   }),
 
@@ -36,6 +45,7 @@ export default defineUserConfig({
       '/': {
         navbar: navbar.zh,
         sidebar: sidebar.zh,
+        sidebarDepth: 1,
         selectLanguageName: '简体中文',
         selectLanguageText: '选择语言',
         selectLanguageAriaLabel: '选择语言',
@@ -44,7 +54,7 @@ export default defineUserConfig({
   }),
 
   plugins: [
-    // @vlib/vuepress-plugins
+    // @bfehub/vuepress-plugins
     codeBlockPlugin(),
   ],
 })
