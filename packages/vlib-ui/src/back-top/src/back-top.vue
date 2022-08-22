@@ -28,7 +28,7 @@ import { backTopProps } from './props'
 const [_, bem] = createNamespace('back-top')
 
 defineOptions({
-  name: 'VlibBackTop',
+  name: 'vlib-back-top',
 })
 
 const props = defineProps(backTopProps)

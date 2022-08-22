@@ -7,7 +7,7 @@ export * from './back-top-tsx'
 
 const components = [BackTop, BackTopTsx]
 
-function install(app: App) {
+export function install(app: App) {
   components.forEach((item) => {
     if (item.install!) {
       app.use(item)

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/vant/lib/index.css" />
+    <title>Umd App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vant"></script>
+    <script src="./node_modules/@bfehub/vlib-ui/dist/index.js"></script>
+    <script>
+      const app = Vue.createApp({
+        template: `
+          <van-cell-group>
+            <van-cell v-for="i in 100" :key="i">Cell {{ i }}</van-cell>
+          </van-cell-group>
+          <vlib-back-top></vlib-back-top>
+        `,
+      })
+
+      app.use(vant)
+      app.use(Vlib)
+      app.mount('#app')
+
+      console.log(vant, Vlib)
+    </script>
+  </body>
+</html>
