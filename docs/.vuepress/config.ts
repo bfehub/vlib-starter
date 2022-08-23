@@ -2,6 +2,7 @@ import { defineUserConfig, defaultTheme, viteBundler } from 'vuepress'
 import { codeBlockPlugin } from '@bfehub/vuepress-plugins'
 import vueDefineOptions from 'unplugin-vue-define-options/vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { generatePaths } from '@bfehub/vlib-ui/scripts/build/utils/rollup'
 import * as navbar from './configs/navbar'
 import * as sidebar from './configs/sidebar'
 
@@ -32,6 +33,13 @@ export default defineUserConfig({
         // @ts-ignore
         vueJsx(),
       ],
+      build: {
+        rollupOptions: {
+          output: {
+            paths: generatePaths(),
+          },
+        },
+      },
     },
     vuePluginOptions: {},
   }),

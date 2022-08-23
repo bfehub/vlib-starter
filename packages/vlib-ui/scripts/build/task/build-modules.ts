@@ -6,7 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDefineOptions from 'unplugin-vue-define-options/rollup'
 import esbuild from 'rollup-plugin-esbuild'
 import { compRoot, outputEsm, outputCjs } from '../utils/paths'
-import { target, generateExternal } from '../utils/rollup'
+import { target, generateExternal, generatePaths } from '../utils/rollup'
 
 export const buildModules = async () => {
   const input = [
@@ -51,6 +51,7 @@ export const buildModules = async () => {
       preserveModulesRoot: 'src',
       sourcemap: true,
       entryFileNames: `[name].js`,
+      paths: generatePaths(),
     }),
   ])
 }
