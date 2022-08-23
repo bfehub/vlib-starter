@@ -165,6 +165,7 @@ importers:
       fs-extra: ^10.1.0
       gulp: ^4.0.2
       happy-dom: ^6.0.4
+      lodash: ^4.17.21
       lodash-es: ^4.17.21
       prompts: ^2.4.2
       rollup: ^2.78.1
@@ -179,6 +180,7 @@ importers:
       vue-tsc: ^0.40.1
     dependencies:
       '@vant/use': 1.4.2
+      lodash: 4.17.21
       lodash-es: 4.17.21
     devDependencies:
       '@esbuild-kit/cjs-loader': 2.3.3
