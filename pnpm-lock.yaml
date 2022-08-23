@@ -175,6 +175,7 @@ importers:
       gulp-clean-css: ^4.3.0
       gulp-sass: ^5.1.0
       happy-dom: ^6.0.4
+      lodash: ^4.17.21
       lodash-es: ^4.17.21
       prompts: ^2.4.2
       rollup: ^2.78.1
@@ -191,6 +192,7 @@ importers:
       vue-tsc: ^0.40.1
     dependencies:
       '@vant/use': 1.4.2
+      lodash: 4.17.21
       lodash-es: 4.17.21
     devDependencies:
       '@esbuild-kit/cjs-loader': 2.3.3

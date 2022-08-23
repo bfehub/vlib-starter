@@ -8,6 +8,7 @@ import { rollup } from 'rollup'
 import esbuild from 'rollup-plugin-esbuild'
 import glob from 'fast-glob'
 import { compRoot, output, outputEsm, outputCjs } from '../utils/paths'
+import { generatePaths } from '../utils/rollup'
 
 /**
  * [src/*.scss] to [es/*.scss, lib/*.scss]
@@ -92,6 +93,7 @@ const buildStyleModules = async () => {
       preserveModulesRoot: 'src',
       sourcemap: true,
       entryFileNames: `[name].js`,
+      paths: generatePaths(),
     }),
   ])
 }
