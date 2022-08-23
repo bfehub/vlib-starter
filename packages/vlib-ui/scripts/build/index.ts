@@ -5,9 +5,10 @@ import {
   buildFull,
   buildStyle,
   generateTypes,
+  generateHelper,
 } from './task'
 
 export default series(
   clean,
-  parallel(buildModules, buildFull, buildStyle, generateTypes)
+  parallel(buildModules, buildFull, buildStyle, generateTypes, generateHelper)
 )

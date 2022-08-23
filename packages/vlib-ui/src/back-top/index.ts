@@ -4,4 +4,10 @@ import _BackTop from './src/back-top.vue'
 export const BackTop = withInstall(_BackTop)
 export default BackTop
 
-export * from './src/props'
+export type { BackTopProps } from './src/props'
+
+declare module 'vue' {
+  export interface GlobalComponents {
+    VlibBackTop: typeof BackTop
+  }
+}

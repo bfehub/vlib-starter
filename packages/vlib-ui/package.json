@@ -39,6 +39,7 @@
     "@vitest/coverage-c8": "^0.22.1",
     "@vitest/ui": "^0.22.1",
     "@vue/test-utils": "^2.0.2",
+    "components-helper": "^2.0.0",
     "esbuild": "^0.15.5",
     "execa": "^6.1.0",
     "fast-glob": "^3.2.11",
@@ -68,5 +69,10 @@
     "lib/**/*.scss",
     "es/**/style/*",
     "lib/**/style/*"
-  ]
+  ],
+  "vetur": {
+    "tags": "dist/tags.json",
+    "attributes": "dist/attributes.json"
+  },
+  "web-types": "dist/web-types.json"
 }
