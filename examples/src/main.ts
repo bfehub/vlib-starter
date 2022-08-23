@@ -5,6 +5,7 @@ import { createApp } from 'vue'
 // import VlibUI from '@bfehub/vlib-ui'
 // import App from './App.vue'
 // import 'vant/lib/index.css'
+// import '@bfehub/vlib-ui/dist/index.css'
 
 // const app = createApp(App)
 // app.use(VantUI)
@@ -12,8 +13,12 @@ import { createApp } from 'vue'
 // app.mount('#app')
 
 // ImportRegister
+// import App from './App.vue'
+// import 'vant/lib/index.css'
+// import '@bfehub/vlib-ui/dist/index.css'
+
+// AutoRegister
 import App from './App.vue'
-import 'vant/lib/index.css'
 
 const app = createApp(App)
 app.mount('#app')
