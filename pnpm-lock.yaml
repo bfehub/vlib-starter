@@ -6,6 +6,7 @@ importers:
     specifiers:
       '@bfehub/eslint-config': workspace:^1.0.0
       '@bfehub/stylelint-config': workspace:^1.0.0
+      '@bfehub/vlib-ui': workspace:^1.0.0
       '@commitlint/cli': ^17.0.3
       '@commitlint/config-conventional': ^17.0.3
       commitizen: ^4.2.5
@@ -20,6 +21,7 @@ importers:
       unplugin-vue-define-options: ^0.10.0
       vue: ^3.2.0
     dependencies:
+      '@bfehub/vlib-ui': link:packages/vlib-ui
       vue: 3.2.37
     devDependencies:
       '@bfehub/eslint-config': link:packages/eslint-config
