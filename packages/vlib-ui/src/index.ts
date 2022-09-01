@@ -19,5 +19,4 @@ export function install(app: App) {
 
 export default {
   install,
-  components,
 }
