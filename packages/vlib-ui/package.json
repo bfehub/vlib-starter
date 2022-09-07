@@ -15,6 +15,15 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage"
   },
+  "files": [
+    "es",
+    "lib",
+    "dist",
+    "global.d.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "vant": "^3.5.0",
     "vue": "^3.2.0"
