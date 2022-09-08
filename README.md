@@ -72,7 +72,9 @@
 
 ### 09-publish
 
-本章我们发布我们的文档和组件。使用 Changesets 作为我们多包管理工具发布项目，使用 Github Pages 或 Vercel 发布项目文档。了解和使用一些 GitHub 上功能，比如 Actions 任务、Issues 标准、其他美化项目的功能。
+本章我们发布我们的组件，使用 [changesets](https://github.com/changesets/changesets) 作为我们多包管理工具发布项目，并使用 Actions 自动化发布组件。
+
+[>>> 实践 Vue3 组件库-基于 changesets 的版本管理及自动化发布](https://juejin.cn/post/7140639347937640479)
 
 ### 10-...
 
