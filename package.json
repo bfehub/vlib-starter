@@ -20,7 +20,7 @@
     "lint:eslint": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx,vue}\"",
     "lint:stylelint": "stylelint --fix --cache \"**/*.{css,scss,less,styl,vue}\"",
     "lint:prettier": "prettier --write  \"**/*.{css,scss,less,styl,js,jsx,ts,tsx,vue}\"",
-    "version": "changeset version",
+    "version-packages": "changeset version",
     "release": "pnpm --recursive --stream build && changeset publish"
   },
   "dependencies": {
