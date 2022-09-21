@@ -1,14 +1,14 @@
-.vlib-demo {
+.code-demo {
   background-color: var(--c-bg);
   border: 1px solid var(--c-border);
   border-radius: 1px;
 }
 
-.vlib-demo-example {
+.code-demo-example {
   padding: 40px 24px;
 }
 
-.vlib-demo-action {
+.code-demo-action {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,7 +34,7 @@
   }
 }
 
-.vlib-demo-source {
+.code-demo-source {
   border-top: 1px dashed var(--c-border);
 
   pre[class*='language-'] {

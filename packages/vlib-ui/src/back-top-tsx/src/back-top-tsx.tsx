@@ -50,7 +50,7 @@ export default defineComponent({
       if (props.target) {
         const el = document.querySelector<HTMLElement>(props.target)
         if (!el) {
-          throw new Error(`[Vlib] target is not existed: ${props.target}`)
+          throw new Error(`[vlib-ui]target is not existed: ${props.target}`)
         }
         target.value = el
       }

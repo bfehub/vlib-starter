@@ -10,11 +10,11 @@
     "docs:serve": "anywhere -s -h localhost -d .vuepress/dist"
   },
   "dependencies": {
-    "@bfehub/vlib-ui": "workspace:^1.0.0",
+    "@bfehub/vlib-ui": "workspace:*",
     "vant": "^3.5.4"
   },
   "devDependencies": {
-    "@bfehub/vuepress-plugins": "workspace:^1.0.0",
+    "@bfehub/vuepress-plugins": "workspace:*",
     "@vitejs/plugin-vue-jsx": "1.3.10",
     "@vuepress/client": "2.0.0-beta.49",
     "anywhere": "^1.6.0",

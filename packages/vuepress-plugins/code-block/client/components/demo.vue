@@ -1,25 +1,25 @@
 <template>
-  <div class="vlib-demo">
-    <div class="vlib-demo-example">
+  <div class="code-demo">
+    <div class="code-demo-example">
       <ClientOnly>
         <slot>渲染 content 内容</slot>
       </ClientOnly>
     </div>
-    <div class="vlib-demo-content">
-      <div class="vlib-demo-action">
-        <span class="vlib-demo-action-button" @click="handleCopy">
+    <div class="code-demo-content">
+      <div class="code-demo-action">
+        <span class="code-demo-action-button" @click="handleCopy">
           <Copy v-show="!state.isCopy" />
           <CopySuccess v-show="state.isCopy" />
         </span>
         <span>{{ props.name }}</span>
-        <span class="vlib-demo-action-button" @click="handleExpand">
+        <span class="code-demo-action-button" @click="handleExpand">
           <Expand v-show="!state.isExpand" />
           <UnExpand v-show="state.isExpand" />
         </span>
       </div>
       <div
         v-show="state.isExpand"
-        class="vlib-demo-source"
+        class="code-demo-source"
         v-html="decodeURIComponent(props.highlightCode)"
       ></div>
     </div>

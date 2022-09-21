@@ -94,6 +94,19 @@
 
 - 以及上面用到的工具都贴出了链接你可提前了解学习。
 
+## 如何使用
+
+你可以下载此项目然后全局替换标识字符串(区分大小写)。
+
+| 标识                | 描述                      | 示例              |
+| ------------------- | ------------------------- | ----------------- |
+| @bfehub             | npm 组织名                | @bfelib           |
+| vlib-ui             | npm ui 包名称             | vant-extra        |
+| bfehub/vlib-starter | github 全路径             | bfelib/vant-extra |
+| vlib-starter        | github 包路径             | vant-extra        |
+| Vlib                | PascalCase 风格的组件前缀 | Vae               |
+| vlib                | kebab-case 风格的组件前缀 | vae               |
+
 ## 结尾
 
 那么就开始我们的组件库搭建之旅吧！！！

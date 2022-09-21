@@ -7,5 +7,9 @@ export const generateTypes = async () => {
     cwd: root,
   })
 
-  return src(`${outputEsm}/**/*.d.ts`).pipe(dest(`${outputCjs}`))
+  await new Promise((resolve) => {
+    src(`${outputEsm}/**/*.d.ts`)
+      .pipe(dest(`${outputCjs}`))
+      .on('end', resolve)
+  })
 }

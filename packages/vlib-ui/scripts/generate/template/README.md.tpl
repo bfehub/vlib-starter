@@ -37,7 +37,7 @@ permalink: /components/<%= name %>
 组件导出以下类型定义
 
 ```ts
-import type { <%= pascalCaseName %>Props } from '@vlib/ui'
+import type { <%= pascalCaseName %>Props } from '@bfehub/vlib-ui'
 ```
 
 ## 样式变量

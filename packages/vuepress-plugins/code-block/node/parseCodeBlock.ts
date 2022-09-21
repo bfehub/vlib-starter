@@ -38,7 +38,7 @@ export function parseCodeBlock(
     // content: 子节点，在 vue 文件中用 slot 渲染。
     const source = readSource(compPath)
     html[i] = {
-      tag: 'VlibDemo',
+      tag: 'CodeDemo',
       attrs: {
         name: source.name,
         rawCode: encodeURIComponent(source.rawCode),
@@ -46,7 +46,7 @@ export function parseCodeBlock(
       },
       content: [
         {
-          tag: `VlibDemo${store.get(pagePath)?.size}`,
+          tag: `CodeDemo${store.get(pagePath)?.size}`,
         },
       ],
     }

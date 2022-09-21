@@ -4,6 +4,6 @@ import './styles/index.scss'
 
 export default defineClientConfig({
   enhance({ app }) {
-    app.component('VlibDemo', Demo)
+    app.component('CodeDemo', Demo)
   },
 })

@@ -40,7 +40,7 @@ permalink: /components/backtop
 组件导出以下类型定义
 
 ```ts
-import type { BackTopProps } from '@bfelib/vant-extra'
+import type { BackTopProps } from '@bfehub/vlib-ui'
 ```
 
 ## 样式变量

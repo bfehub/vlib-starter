@@ -10,7 +10,7 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@bfehub/vlib-ui": "workspace:^1.0.0",
+    "@bfehub/vlib-ui": "workspace:*",
     "vant": "^3.5.4",
     "vue": "^3.2.37"
   },

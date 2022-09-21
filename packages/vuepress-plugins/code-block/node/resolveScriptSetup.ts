@@ -29,7 +29,7 @@ export const combineScriptSetup = (deps: string[], original: string) => {
   return `\n
 <script lang="ts" setup>
   ${deps
-    .map((path, index) => `import VlibDemo${index + 1} from '${path}'`)
+    .map((path, index) => `import CodeDemo${index + 1} from '${path}'`)
     .join('\n')}
 
   ${original}\n
