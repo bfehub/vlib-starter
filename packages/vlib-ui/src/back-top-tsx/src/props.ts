@@ -1,4 +1,4 @@
-import { makeNumericProp, makeStringProp } from 'vant/es/utils'
+import { makeNumericProp, numericProp } from 'vant/es/utils'
 import type { ExtractPropTypes } from 'vue'
 
 export const backTopTsxProps = {
@@ -9,15 +9,15 @@ export const backTopTsxProps = {
   /**
    * 触发滚动的对象
    */
-  target: makeStringProp(''),
+  target: String,
   /**
    * 控制其显示位置，距离页面右边距
    */
-  right: makeNumericProp(''),
+  right: numericProp,
   /**
    * 控制其显示位置，距离页面底部距离
    */
-  bottom: makeNumericProp(''),
+  bottom: numericProp,
 }
 
 export type BackTopTsxProps = ExtractPropTypes<typeof backTopTsxProps>
