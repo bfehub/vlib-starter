@@ -6,7 +6,7 @@
 import { createNamespace } from '../../utils'
 import { <%= camelCaseName %>Props } from './props'
 
-const [_, bem] = createNamespace('back-top')
+const [_, bem] = createNamespace('<%= name %>')
 
 defineOptions({
   name: 'Vlib<%= pascalCaseName %>',
