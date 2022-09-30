@@ -3,7 +3,7 @@ import { parseCodeBlock } from '.'
 
 export function resolveHtmlBlock(
   md: Markdown,
-  store: Map<string, Set<string>>
+  store: Map<string, Map<string, string>>
 ) {
   const rawRule = md.renderer.rules.html_block!
 

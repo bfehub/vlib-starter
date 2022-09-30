@@ -4,7 +4,7 @@ const scriptRegExp = /<script\s(.*\s)?setup(\s.*)?>([\s\S]*)<\/script>/
 
 export const resolveScriptSetup = (
   page: Page,
-  store: Map<string, Set<string>>
+  store: Map<string, Map<string, string>>
 ) => {
   const deps = store.get(page.filePath!)
   if (!deps) return
@@ -22,14 +22,14 @@ export const resolveScriptSetup = (
   }
 
   // 根据缓存中存储的组件路径导入组件，组件名称和生成节点时的规则一致。
-  page.sfcBlocks[i] = combineScriptSetup([...deps], original)
+  page.sfcBlocks[i] = combineScriptSetup([...deps.entries()], original)
 }
 
-export const combineScriptSetup = (deps: string[], original: string) => {
+export const combineScriptSetup = (deps: string[][], original: string) => {
   return `\n
 <script lang="ts" setup>
   ${deps
-    .map((path, index) => `import CodeDemo${index + 1} from '${path}'`)
+    .map(([hash, path]) => `import CodeDemo${hash} from '${path}'`)
     .join('\n')}
 
   ${original}\n
