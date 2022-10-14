@@ -13,7 +13,7 @@ export default defineUserConfig({
     '**/*.md',
     '!.vuepress',
     '!node_modules',
-    '../packages/vlib-ui/**/*.md',
+    '../packages/vlib-ui/src/**/*.md',
     '!../packages/**/node_modules',
   ],
 

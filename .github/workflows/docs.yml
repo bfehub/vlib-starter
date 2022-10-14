@@ -1,0 +1,43 @@
+# https://docs.github.com/en/actions/using-workflows/about-workflows
+name: Docs
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      # https://github.com/actions/checkout
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      # https://github.com/actions/setup-node
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      # https://github.com/pnpm/action-setup
+      - name: Setup Pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.x
+
+      # https://pnpm.io/zh/cli/install#--frozen-lockfile
+      - name: Install and Build
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm docs:build
+
+      # https://github.com/JamesIves/github-pages-deploy-action
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: docs/.vuepress/dist

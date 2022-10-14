@@ -10,7 +10,7 @@ permalink: /components/<%= name %>
 
 基础用法基础用法基础用法基础用法基础用法基础用法。
 
-<demo iframe="200" src="./__demos__/basic.vue"></demo>
+<demo src="./__demos__/basic.vue"></demo>
 
 ## 组件配置
 
