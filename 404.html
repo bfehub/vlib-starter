@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.49">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <title>vlib-starter</title><meta name="description" content="Vue3 组件库开发模板 & Vue3 组件库实践指南">
+    <link rel="modulepreload" href="/vlib-starter/assets/app.9d233db9.js"><link rel="modulepreload" href="/vlib-starter/assets/404.html.895d9489.js"><link rel="modulepreload" href="/vlib-starter/assets/404.html.ab74ef0a.js"><link rel="prefetch" href="/vlib-starter/assets/index.html.a12b99f0.js"><link rel="prefetch" href="/vlib-starter/assets/index.html.63e794d8.js"><link rel="prefetch" href="/vlib-starter/assets/index.html.35f8377b.js"><link rel="prefetch" href="/vlib-starter/assets/index.html.a4f1788b.js"><link rel="prefetch" href="/vlib-starter/assets/index.html.d1d71b5e.js"><link rel="prefetch" href="/vlib-starter/assets/index.html.714032af.js"><link rel="prefetch" href="/vlib-starter/assets/index.html.77d51451.js"><link rel="prefetch" href="/vlib-starter/assets/index.html.62878e2d.js"><link rel="prefetch" href="/vlib-starter/assets/index.html.0f380a96.js"><link rel="prefetch" href="/vlib-starter/assets/index.html.ae7f8fc6.js"><link rel="prefetch" href="/vlib-starter/assets/404.ab71912f.js"><link rel="prefetch" href="/vlib-starter/assets/Layout.2fd2c353.js">
+    <link rel="stylesheet" href="/vlib-starter/assets/style.89d90ba0.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><main class="page"><div class="theme-default-content"><h1>404</h1><blockquote>Looks like we&#39;ve got some broken links.</blockquote><a href="/vlib-starter/" class="">Take me home</a></div></main></div><!----><!--]--></div>
+    <script type="module" src="/vlib-starter/assets/app.9d233db9.js" defer></script>
+  </body>
+</html>
