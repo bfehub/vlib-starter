@@ -3,7 +3,7 @@ import type { Plugin } from '@vuepress/core'
 import { resolveHtmlBlock, resolveScriptSetup, vitePageHMR } from './node'
 
 export const codeBlockPlugin = (): Plugin => {
-  const store = new Map<string, Set<string>>()
+  const store = new Map<string, Map<string, string>>()
 
   return {
     name: '@bfehub/vuepress-plugin-code-block',

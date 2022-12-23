@@ -9,7 +9,7 @@ import { <%= camelCaseName %>Props } from './props'
 const [_, bem] = createNamespace('<%= name %>')
 
 defineOptions({
-  name: 'Vlib<%= pascalCaseName %>',
+  name: 'vlib-<%= name %>',
 })
 
 defineProps(<%= camelCaseName %>Props)
