@@ -6,23 +6,22 @@
   "description": "Stylelint Config.",
   "peerDependencies": {
     "postcss": ">=8.0.0",
-    "prettier": ">=2.0.0",
-    "stylelint": ">=14.0.0"
+    "prettier": ">=3.0.0",
+    "stylelint": ">=15.0.0"
   },
   "dependencies": {
     "postcss-html": "^1.5.0",
     "postcss-less": "^6.0.0",
-    "postcss-scss": "^4.0.4",
+    "postcss-scss": "^4.0.6",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-recess-order": "^3.0.0",
-    "stylelint-config-standard": "^27.0.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-prettier": "^2.0.0"
+    "stylelint-config-recess-order": "^4.3.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-prettier": "^4.0.0"
   },
   "devDependencies": {
-    "postcss": "^8.4.16",
-    "prettier": "^2.7.1",
-    "stylelint": "^14.10.0"
+    "postcss": "^8.4.27",
+    "prettier": "^3.0.0",
+    "stylelint": "^15.10.2"
   }
 }
