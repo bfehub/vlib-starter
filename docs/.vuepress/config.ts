@@ -1,10 +1,9 @@
 import { defineUserConfig, defaultTheme, viteBundler } from 'vuepress'
-import { codeBlockPlugin } from '@bfehub/vuepress-plugins'
 import vueDefineOptions from 'unplugin-vue-define-options/vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import { generatePaths } from '@bfehub/vlib-ui/scripts/build/utils/rollup'
 import * as navbar from './configs/navbar'
 import * as sidebar from './configs/sidebar'
+import { codeBlockPlugin } from './plugins'
 
 export default defineUserConfig({
   base: '/vlib-starter/',
@@ -27,19 +26,8 @@ export default defineUserConfig({
 
   bundler: viteBundler({
     viteOptions: {
-      plugins: [
-        // @ts-ignore
-        vueDefineOptions(),
-        // @ts-ignore
-        vueJsx(),
-      ],
-      build: {
-        rollupOptions: {
-          output: {
-            paths: generatePaths(),
-          },
-        },
-      },
+      // @ts-ignore
+      plugins: [vueDefineOptions(), vueJsx()],
     },
     vuePluginOptions: {},
   }),

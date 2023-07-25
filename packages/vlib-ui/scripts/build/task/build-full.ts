@@ -18,11 +18,8 @@ const build = async (minify: boolean) => {
   const bundle = await rollup({
     input,
     plugins: [
-      // @ts-ignore
       vueDefineOptions(),
-      // @ts-ignore
       vue(),
-      // @ts-ignore
       vueJsx(),
       nodeResolve(),
       esbuild({

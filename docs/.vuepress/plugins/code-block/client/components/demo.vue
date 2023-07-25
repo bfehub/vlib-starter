@@ -56,10 +56,10 @@ const handleExpand = () => {
 /**
  * Copy raw code
  */
-const rawCode = ref('')
-const { copy } = useClipboard({ source: rawCode })
+const source = ref('')
+const { copy } = useClipboard({ source })
 const handleCopy = async () => {
-  rawCode.value = decodeURIComponent(props.rawCode)
+  source.value = decodeURIComponent(props.rawCode)
 
   await copy()
 

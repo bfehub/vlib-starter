@@ -1,4 +1,5 @@
 import { series, parallel } from 'gulp'
+import './hack'
 import {
   clean,
   buildModules,
