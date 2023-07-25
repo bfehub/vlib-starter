@@ -5,10 +5,10 @@ export function resolveHtmlBlock(
   md: Markdown,
   store: Map<string, Map<string, string>>
 ) {
-  const rawRule = md.renderer.rules.html_block!
+  const rawRule = md.renderer.rules.html_inline!
 
-  // 扩展 html_block 渲染规则，保存原始的渲染规则处理完后再调用原始的渲染规则。
-  md.renderer.rules.html_block = function (
+  // 扩展 html_inline 渲染规则，保存原始的渲染规则处理完后再调用原始的渲染规则。
+  md.renderer.rules.html_inline = function (
     tokens,
     idx,
     opts,

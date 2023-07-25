@@ -9,20 +9,18 @@ export const resolveScriptSetup = (
   const deps = store.get(page.filePath!)
   if (!deps) return
 
-  let i = 0
-  let original = ''
+  page.sfcBlocks.scriptSetup ??= {} as any
   // 如果在页面中写了 `script setup` 提取内容，往里追加组件导入的代码，在重写回去。
-  for (const tag of page.sfcBlocks) {
-    if (tag.trim().startsWith('<script')) {
-      original = tag.match(scriptRegExp)?.[3] ?? ''
-      break
-    }
-
-    i++
+  let original = page.sfcBlocks.scriptSetup?.content || ''
+  if (original.trim().startsWith('<script')) {
+    original = original.match(scriptRegExp)?.[3] ?? ''
   }
 
   // 根据缓存中存储的组件路径导入组件，组件名称和生成节点时的规则一致。
-  page.sfcBlocks[i] = combineScriptSetup([...deps.entries()], original)
+  ;(page.sfcBlocks.scriptSetup as any).content = combineScriptSetup(
+    [...deps.entries()],
+    original
+  )
 }
 
 export const combineScriptSetup = (deps: string[][], original: string) => {
