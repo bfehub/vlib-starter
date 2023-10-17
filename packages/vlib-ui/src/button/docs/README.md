@@ -10,4 +10,4 @@ permalink: /components/button
 
 使用 `type`、`plain`、`round` 和 `circle` 来定义按钮的样式。
 
-<demo src="./__demos__/basic.vue"></demo>
+<demo src="../__demos__/basic.vue"></demo>

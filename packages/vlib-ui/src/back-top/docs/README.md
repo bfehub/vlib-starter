@@ -10,7 +10,7 @@ permalink: /components/backtop
 
 通过滑动来查看容器右下角的按钮。
 
-<demo src="./__demos__/basic.vue"></demo>
+<demo src="../__demos__/basic.vue"></demo>
 
 ## 组件配置
 

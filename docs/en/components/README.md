@@ -1,3 +1,3 @@
 # Introduction
 
-Vue 组件.
+Vue components.
