@@ -1,0 +1,1 @@
+import{_ as o,M as c,p as t,U as _}from"./framework-60933dea.js";const s={};function n(r,a){const e=c("vlib-back-top-tsx");return t(),_(e)}const f=o(s,[["render",n],["__file","basic.vue"]]);export{f as C};

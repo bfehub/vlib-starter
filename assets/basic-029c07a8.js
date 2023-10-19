@@ -1,0 +1,1 @@
+import{_ as t,p as o,q as n,R as e}from"./framework-60933dea.js";const s={},_=e("button",null,"按钮一",-1),c=e("button",null,"按钮二",-1),l=e("button",null,"按钮三",-1),r=[_,c,l];function a(i,u){return o(),n("div",null,r)}const b=t(s,[["render",a],["__file","basic.vue"]]);export{b as C};
