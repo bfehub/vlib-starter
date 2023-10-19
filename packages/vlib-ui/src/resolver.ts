@@ -31,9 +31,9 @@ function getSideEffects(
   if (!importStyle || isSSR) return
 
   if (importStyle === 'scss') {
-    return `@bfehub/vlib-ui/${moduleType}/${dirName}/style/scss`
+    return `@bfehub/vlib-ui/${moduleType}/${dirName}/style/index.scss`
   } else {
-    return `@bfehub/vlib-ui/${moduleType}/${dirName}/style/index`
+    return `@bfehub/vlib-ui/${moduleType}/${dirName}/style/index.css`
   }
 }
 
