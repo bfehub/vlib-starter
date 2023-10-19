@@ -6,7 +6,7 @@ permalink: /en/components/backtop
 
 Back top button.
 
-## Base usage
+## Base Usage
 
 Swipe to view the button in the bottom right corner of the container.
 
@@ -35,7 +35,7 @@ Swipe to view the button in the bottom right corner of the container.
 | ------- | ------------------------- |
 | default | Customize default content |
 
-## type definition
+## Type Definition
 
 Component exports the following type definitions
 
@@ -43,7 +43,7 @@ Component exports the following type definitions
 import type { BackTopProps } from '@bfehub/vlib-ui'
 ```
 
-## Style variables
+## Style Variables
 
 The component provides the following CSS variables that can be used to customize styles
 

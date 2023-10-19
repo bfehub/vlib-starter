@@ -4,7 +4,7 @@ title: Home
 heroImage: /images/hero.png
 actions:
   - text: Get Started
-    link: /components/
+    link: /en/components/
     type: primary
 features:
   - title: Simplicity First

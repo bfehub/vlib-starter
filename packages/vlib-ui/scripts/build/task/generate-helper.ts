@@ -5,6 +5,7 @@ import type {
   ReWebTypesSource,
 } from 'components-helper'
 import helper from 'components-helper'
+import { relative } from 'path'
 import { output, compRoot, compPackage } from '../utils/paths'
 import { PKG_NAME, PKG_CAMELCASE_NAME } from '../utils/constants'
 
@@ -24,15 +25,13 @@ const reComponentName: ReComponentName = (title) => {
 
 /**
  * 重写文档路径
- * @example src/back-top/README.md -> https://github.com/bfehub/vlib-starter/components/back-top/
+ * @example src/back-top/README.md -> https://bfehub.github.io/vlib-starter/components/
  */
 const reDocUrl: ReDocUrl = (_, header, path) => {
-  const docs = 'https://github.com/bfehub/vlib-starter/components/'
-  const name = path?.split('/')[1] + '/'
-  const _header = header
-    ? header.replace(/[ ]+/g, '-').toLowerCase()
-    : undefined
-  return docs + name + (_header ? '#' + _header : '')
+  const docs = 'https://bfehub.github.io/vlib-starter/components/'
+  const name = relative(compRoot, path!)?.split('/')[0].replace(/-/g, '') + '/'
+  const attr = header ? header.replace(/[ ]+/g, '-').toLowerCase() : undefined
+  return docs + name + (attr ? '#' + attr : '')
 }
 
 /**

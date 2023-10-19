@@ -6,7 +6,7 @@ permalink: /en/components/button
 
 Normal button.
 
-## Base usage
+## Base Usage
 
 Use `type`, `plain`, `round`, and `circle` to define the style of the button.
 
