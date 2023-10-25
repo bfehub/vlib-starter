@@ -8,8 +8,8 @@ export const generateTypes = async () => {
   })
 
   await new Promise((resolve) => {
-    src(`${outputEsm}/**/*.d.ts`)
-      .pipe(dest(`${outputCjs}`))
+    src('**/*.d.ts', { cwd: outputEsm })
+      .pipe(dest(outputCjs))
       .on('end', resolve)
   })
 }
