@@ -15,7 +15,7 @@ import { generatePaths } from '../utils/rollup'
  */
 const buildScssCopy = async () => {
   await new Promise((resolve) => {
-    src(`${compRoot}/**/*.scss`)
+    src('**/*.scss', { cwd: compRoot })
       .pipe(dest(outputEsm))
       .pipe(dest(outputCjs))
       .on('end', resolve)
@@ -28,7 +28,7 @@ const buildScssCopy = async () => {
 const buildScssModules = async () => {
   const sass = gulpSass(dartSass)
   await new Promise((resolve) => {
-    src(`${compRoot}/**/style/*.scss`)
+    src('**/style/*.scss', { cwd: compRoot })
       .pipe(sass.sync())
       .pipe(autoprefixer({ cascade: false }))
       .pipe(cleanCSS())
@@ -44,7 +44,7 @@ const buildScssModules = async () => {
 const buildScssFull = async () => {
   const sass = gulpSass(dartSass)
   await new Promise((resolve) => {
-    src(`${compRoot}/*.scss`)
+    src('*.scss', { cwd: compRoot })
       .pipe(sass.sync())
       .pipe(autoprefixer({ cascade: false }))
       .pipe(cleanCSS())
@@ -59,7 +59,11 @@ const buildScssFull = async () => {
 const buildStyleModules = async () => {
   const input = [
     // style
-    ...(await glob(`${compRoot}/**/style/*.ts`)),
+    ...(await glob('**/style/*.ts', {
+      cwd: compRoot,
+      absolute: true,
+      onlyFiles: true,
+    })),
     // resolver
     path.resolve(compRoot, 'resolver.ts'),
   ]

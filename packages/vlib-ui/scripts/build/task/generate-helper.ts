@@ -68,9 +68,14 @@ export const generateHelper = async () => {
     // 基本配置
     name: PKG_NAME,
     version,
-    entry: `${compRoot}/**/*.md`,
+    entry: `**/*.md`,
     outDir: output,
     space: 2,
+    fastGlobConfig: {
+      cwd: compRoot,
+      absolute: true,
+      onlyFiles: true,
+    },
 
     // 解析配置
     reComponentName,
